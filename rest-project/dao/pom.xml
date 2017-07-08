@@ -11,6 +11,12 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- internal dependency -->
+		<dependency>
 			<groupId>tr.com.yd.tabak</groupId>
 			<artifactId>domain</artifactId>
 			<version>0.0.1-SNAPSHOT</version>

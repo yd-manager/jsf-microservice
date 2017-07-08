@@ -1,6 +1,5 @@
 package tr.com.yd.tabak.restapi.domain.converter;
 
-import tr.com.yd.tabak.restapi.domain.dto.BaseDTO;
 import tr.com.yd.tabak.restapi.domain.entity.BaseEntity;
 
 public interface Convertable<E extends BaseEntity> {

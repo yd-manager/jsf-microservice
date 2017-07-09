@@ -1,8 +1,7 @@
-package tr.com.yd.tabak.restapi.domain.dto;
+package tr.com.yd.tabak.commons.dto;
 
-import tr.com.yd.tabak.restapi.domain.entity.User;
 
-public class UserDTO extends BaseDTO<User> {
+public class UserDTO extends BaseDTO {
 
 	private String username;
 	private String password;
@@ -17,11 +16,6 @@ public class UserDTO extends BaseDTO<User> {
 	}
 	public void setPassword(String password) {
 		this.password = password;
-	}
-	
-	public User toEntity() {
-		User user = new User();
-		return user;
 	}
 	
 }

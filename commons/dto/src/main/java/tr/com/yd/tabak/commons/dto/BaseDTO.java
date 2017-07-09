@@ -1,11 +1,8 @@
-package tr.com.yd.tabak.restapi.domain.dto;
+package tr.com.yd.tabak.commons.dto;
 
 import java.sql.Date;
 
-import tr.com.yd.tabak.restapi.domain.converter.Convertable;
-import tr.com.yd.tabak.restapi.domain.entity.BaseEntity;
-
-public abstract class BaseDTO<E extends BaseEntity> implements Convertable<E>{
+public  class BaseDTO{
 
 	private Long id;
 	private Date creationDate;
@@ -43,6 +40,4 @@ public abstract class BaseDTO<E extends BaseEntity> implements Convertable<E>{
 	public void setUpdatedUserId(Long updatedUserId) {
 		this.updatedUserId = updatedUserId;
 	}
-	
-	
 }

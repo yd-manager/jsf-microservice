@@ -1,12 +1,24 @@
 package tr.com.yd.tabak.restapi.dao;
 
-import tr.com.yd.tabak.restapi.domain.dto.BaseDTO;
+import java.util.List;
 
-public class BaseDao<D extends BaseDTO<?>> {
+import org.springframework.beans.factory.annotation.Autowired;
 
+import tr.com.yd.tabak.commons.dto.BaseDTO;
+import tr.com.yd.tabak.restapi.converter.Converter;
+import tr.com.yd.tabak.restapi.domain.entity.BaseEntity;
+
+public class BaseDao<E extends BaseEntity,D extends BaseDTO,C extends Converter<D,E>> {
+
+	@Autowired
+	private C converter;
+	
 	public D insert(D dto)
 	{
-		dto.toEntity();
-		return dto;
+		E entity = converter.toEntity(dto);
+		// insert
+		return converter.toDTO(entity);
 	}
+	
+
 }

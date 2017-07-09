@@ -1,7 +1,12 @@
 package tr.com.yd.tabak.restapi.dao;
 
-import tr.com.yd.tabak.restapi.domain.dto.UserDTO;
+import org.springframework.stereotype.Repository;
 
-public class UserDao extends BaseDao<UserDTO> {
+import tr.com.yd.tabak.commons.dto.UserDTO;
+import tr.com.yd.tabak.restapi.converter.UserConverter;
+import tr.com.yd.tabak.restapi.domain.entity.User;
+
+@Repository
+public class UserDao extends BaseDao<User,UserDTO,UserConverter> {
 
 }

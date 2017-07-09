@@ -8,6 +8,7 @@
 	<modules>
 		<module>rest-project</module>
 		<module>jsf-project</module>
+		<module>commons</module>
 	</modules>
 
 	<properties>

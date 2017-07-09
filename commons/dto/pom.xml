@@ -2,9 +2,9 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>tr.com.yd.tabak</groupId>
-    <artifactId>rest-project</artifactId>
+    <artifactId>commons</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
-  <artifactId>domain</artifactId>
+  <artifactId>dto</artifactId>
 </project>

@@ -2,21 +2,35 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:composite="http://java.sun.com/jsf/composite">
- <h:head>
- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
- </h:head>
-    <composite:interface>
-    	<composite:attribute name="test" />
-    </composite:interface>
-    <composite:implementation>
-		<script>	
-		
-	    	alert('#{cc.attrs.test}');	
-		
-		</script>
-		#{cc.attrs.test}
-    </composite:implementation>
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:composite="http://java.sun.com/jsf/composite">
+<composite:interface>
+	<composite:attribute name="restUrl" />
+	<composite:attribute name="value" />
+	<composite:attribute name="key" />
+</composite:interface>
+<composite:implementation>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" />
+	<script type="text/javascript">
+		var root = '#{restURLBean.root}';
+		var restURL = '#{cc.attrs.restUrl}';
+		var list;
+		var itemValue = '#{cc.attrs.key}';
+		var itemLabel = '#{cc.attrs.value}';
+		$.ajax({
+			url : root + restURL,
+			success : function(result) {
+				list = result;
+				list.forEach(function(item)
+				{
+					var temp = '<option value="' + item[itemValue] + '">'+ item[itemLabel] + '</option>';
+					$('#id1').append(temp);	
+				});
+			}
+		});
+	</script>
+	<select id="id1"/>
+</composite:implementation>
 </html>

@@ -5,9 +5,10 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:tabak="http://java.sun.com/jsf/composite/tabak">
     <h:body>
-
-    	<h1>hello</h1>
-		<tabak:oneMenu test="#{testBean.userDTO}"></tabak:oneMenu>
-	
+		<tabak:oneMenu restUrl="/user/all"
+					   value="username" 
+					   key="id"/>
     </h:body>
+    
+    
 </html>

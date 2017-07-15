@@ -6,7 +6,7 @@ import tr.com.yd.tabak.commons.dto.UserDTO;
 import tr.com.yd.tabak.restapi.domain.entity.User;
 
 @Component
-public class UserConverter implements Converter<UserDTO, User>{
+public class UserConverter implements BaseConverter<UserDTO, User>{
 
 	@Override
 	public User toEntity(UserDTO d) {
@@ -19,6 +19,8 @@ public class UserConverter implements Converter<UserDTO, User>{
 		UserDTO userDTO = new UserDTO();
 		userDTO.setId(50L);
 		userDTO.setUsername("ali");
+		userDTO.setUsercode("ali2017");
+		userDTO.setUsername("Veli");
 		return userDTO;
 	}
 

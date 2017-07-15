@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import tr.com.yd.tabak.commons.dto.UserDTO;
-import tr.com.yd.tabak.restapi.service.UserService;
+import tr.com.yd.tabak.restapi.service.user.UserService;
 
 @RestController
 @RequestMapping("user")
